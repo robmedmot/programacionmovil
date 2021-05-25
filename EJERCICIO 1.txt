@@ -1,0 +1,109 @@
+import kotlin.random.Random
+
+fun main() {
+    // 1.
+    var string0: String = "String0" // String
+	val int0: Int =  10 // Int
+    val double0 = 1.5 // Double
+    val bool0 = true // Bool
+    
+    // 2.
+    val nombre = "Roberto"
+    val edad = 21
+    println("$nombre es $edad")
+    
+    // 3.
+    val int1: Int = 1
+    if (int1 > 18) {
+        println("MAYOR DE EDAD")
+    } else if (int1 > 0) {
+        println("MENOR DE EDAD")
+    } else {
+        println("ERROR")
+    }
+    
+    // 4.
+    for (i in 1..35) {    
+        println("$nombre es $edad || #$i")
+    }
+    
+    // 5.
+    val int2: Int =  0
+    while (int2 > 10) {
+    val int2 = Random.nextInt(0, 99)
+    }
+    
+    // 6.
+    val string1 = "Kotlin"
+    val string2: String? = null
+    println(string2?.length)
+    println(string1?.length)
+    
+    // 7.
+    var string3: String?
+    string3 = null
+    println(string3)
+    
+    // 8.
+    var int3 = 2
+    var int4 = 0
+    var result: Int
+	
+    try {
+        result = int3 / int4
+	} catch (e: ArithmeticException) {
+    println("ERROR: DIVISION ENTRE CERO")
+	}
+    
+    // 9.
+    var str: String? = null  
+	var str2: String? = "May be declare nullable string"  
+	var len1:  Int = str ?.length ?: -1  
+	var len2:  Int = str2 ?.length ?:  -1  
+  
+	println("Length of str is ${len1}")  
+	println("Length of str2 is ${len2}")  
+    
+    // 10.
+    val list = listOf("Roberto", "David", "Omar", "Jose", "Brian")
+    
+    // 11.
+    val listInt = mutableListOf<Int>(0, 1, 2, 3, 4)
+	val list1 = listOf(5, 6)
+    
+    listInt.addAll(list1)
+    listInt.remove(4)
+    
+    // 12.
+    val reversedList = listInt.reversed()
+    println(reversedList)
+    
+    // 13.
+    val map = mapOf(1 to "x", 2 to "y", -1 to "zz")
+    
+    // 14.
+    val set0 = setOf(1, 2, 3)
+    
+    // 15.
+    fun varia(nombre: String = "N/A", edad: Int = 0) 
+    { 
+        println("$nombre es $edad")
+    	if (edad > 18) {
+        	println("MAYOR DE EDAD")
+    	} else if (edad > 0) {
+        	println("MENOR DE EDAD")
+    	} else {
+        	println("ERROR")
+    	}
+    }
+    
+    // 16.
+    varia(nombre = "Roberto", edad = 17)
+    varia(nombre = "Omar", edad = 19)
+    varia(nombre = "Mario", edad = 20)
+    varia(nombre = "Luigi", edad = 14)
+    varia(nombre = "John", edad = -2)
+    
+    // 17.
+    varia()
+}
